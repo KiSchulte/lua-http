@@ -39,6 +39,7 @@ before_install:
   - luarocks install busted
 
 install:
+  - apt install libpsl-dev
   - luarocks install --only-deps http-scm-0.rockspec
   - if [ "$ZLIB" = "lzlib" ]; then luarocks install lzlib; fi
   - if [ "$ZLIB" = "lua-zlib" ]; then luarocks install lua-zlib; fi
